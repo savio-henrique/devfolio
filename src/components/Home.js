@@ -1,6 +1,7 @@
 import React from "react"; 
+import Carousel from "./Carousel";
 
-const Home = () => {
+const Home = (props) => {
     let panel = "h-2/6 flex place-content-around items-center bg-opacity-30 w-full";
     return(
         <div className="flex-col place-content-center">
@@ -10,7 +11,7 @@ const Home = () => {
                     Html, CSS, JavaScript, React.js, PhP e MySQL
                     <b className="text-ubuntu-orange">/&gt;</b>
                 </p>
-                <img src="images/image1.png" className="h-96 p-10"/>
+                <img src="images/code.png" className="h-96 p-10"/>
             </div>
             <div className={panel+" bg-ubuntu-purple"}>
                 <img src="images/code.png" className="h-96 p-10"/>
@@ -20,6 +21,7 @@ const Home = () => {
                     <b className="text-ubuntu-orange">&lt;/div&gt;</b>
                     </p>
             </div>
+            <Carousel jobs={props.jobs}/>
         </div>
     );
 };
